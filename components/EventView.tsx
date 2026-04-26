@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Clock, User, ChevronRight } from "lucide-react";
 
 interface Photo {
@@ -65,12 +65,12 @@ export default function EventView({ event }: { event: EventPage }) {
     return <div className="min-h-screen bg-zinc-950 flex items-center justify-center text-red-500">Event not found</div>;
   }
 
-  const fadeIn = {
+  const fadeIn: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
-  const staggerContainer = {
+  const staggerContainer: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
