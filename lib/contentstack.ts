@@ -1,0 +1,7 @@
+import Contentstack from 'contentstack';
+
+export const Stack = Contentstack.Stack({
+  api_key: process.env.NEXT_PUBLIC_API_KEY as string,
+  delivery_token: process.env.NEXT_PUBLIC_DELIVERY_TOKEN as string,
+  environment: process.env.NEXT_PUBLIC_ENVIRONMENT as string,
+});
